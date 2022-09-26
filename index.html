@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> 
+    <!-- link acima para baixar carinhas para a frente do login e senha -->
     <link rel="stylesheet" href="Estilos/style.css">
     <link rel="stylesheet" href="Estilos/media-query.css">
 </head>
@@ -17,8 +19,24 @@
             <div id="formulario">
                 <h1>Login</h1>
                 <p>Seja Bem Vindo novamente. Faça login paara acessar sua conta e poder fazer as suas configurações no seu ambiente.</p>
-                <form action="login.php" method="post">
-                    
+                <form action="login.php" method="post" autocomplete="on">
+                    <div class="campo">
+                        <i class="material-icons">person</i>
+                        <!-- i ou span para mostra as figura (face ou person) no site, autocomplete é para sugerir dados -->
+                        <input type="email" name="login" id="ilogin" placeholder="Seu e-mail." autocomplete="email" required maxlength="40">
+                        <label for="ilogin"> Login </label>
+                    </div>
+                    <div class="campo">
+                        <i class="material-icons">vpn_key</i>
+                        <!-- i ou span para mostra a figura da chave (vpn_key) no site -->
+                        <input type="password" name="senha" id="isenha" placeholder="Sua senha." autocomplete="current-password" required minlength="4" maxlength="12">
+                        <label for="isenha">Senha </label> 
+                        <!-- colocando o label, em baixo do input na apresentação ele muda de lado -->
+                    </div>
+                    <input type="submit" value="Entrar">
+                    <!-- <button>Esqueci a senha</button> -->
+                    <a href="esqueci.html">Esqueci a Senha <i class="material-icons">mail</i>
+                    </a>
                 </form>
 
             </div>
